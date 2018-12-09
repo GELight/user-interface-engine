@@ -1,8 +1,11 @@
 var restify = require('restify');
- 
+var config = require('./config.js');
+
+console.log(config);
+
 const server = restify.createServer({
-  name: 'UserInterfaceEngine',
-  version: '0.0.1'
+  name: config.appName,
+  version: config.version
 });
 
 server.use(restify.plugins.acceptParser(server.acceptable));
