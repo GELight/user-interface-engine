@@ -2,13 +2,14 @@
   "name": "user-interface-engine",
   "version": "0.0.1",
   "private": true,
+  "main": "server/server.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "restify": "^7.3.0",
