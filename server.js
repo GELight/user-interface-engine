@@ -1,5 +1,6 @@
-var restify = require('restify');
-var config = require('./config.js');
+const restify = require('restify');
+const config = require('./config.js');
+const fs = require('fs');
 
 console.log(config);
 
@@ -12,15 +13,17 @@ server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
 
-server.get('/ui', function (req, res, next) {
-  
-  var body = '<html><body style="background: #333; color: #ccc;"><h1>User INterface Engine</h1></body></html>';
+server.post('/ui', function (req, res, next) {
+
+  let html = fs.readFileSync('./dist/index.html', (err, html) => {
+    console.log(err, html);
+  });
   
   res.writeHead(200, {
-    'Content-Length': Buffer.byteLength(body),
+    'Content-Length': Buffer.byteLength(html),
     'Content-Type': 'text/html'
   });
-  res.write(body);
+  res.write(html);
   res.end();
 
   return next();
