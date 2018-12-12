@@ -30,5 +30,6 @@ server.post('/ui', function (req, res, next) {
 });
 
 server.listen(ServerConfig.port, function () {
-  console.log('%s listening at %s', server.name, server.url);
+  console.log('"%s" listening at %s', server.name, server.url);
+  console.log(' Docker Container > http://localhost:' + 3000);
 });
