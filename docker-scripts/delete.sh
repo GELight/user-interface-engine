@@ -2,7 +2,7 @@
 
 clear
 
-SERVICE_NAME='user-interface-engine-service-test'
+SERVICE_NAME='user-interface-engine'
 
 echo
 echo '====================================================================================='

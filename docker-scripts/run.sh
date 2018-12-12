@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run --name user-interface-engine-service-test -p 3000:8082 -d gelight/user-interface-engine-service-test
+docker run --name user-interface-engine -p 3000:9000 -d gelight/user-interface-engine

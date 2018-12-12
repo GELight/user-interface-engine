@@ -4,7 +4,7 @@ const config = {
     app_name: packageJson.name,
     version: packageJson.version,
     host: '/',
-    port: 8081
+    port: 9000
 }
 
 module.exports = config;
