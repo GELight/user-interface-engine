@@ -15,6 +15,8 @@ server.use(restify.plugins.bodyParser());
 
 server.post('/ui', function (req, res, next) {
 
+  console.log(req.body);
+
   let html = fs.readFileSync('./dist/index.html', (err, html) => {
     console.log(err, html);
   });
